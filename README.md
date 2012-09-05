@@ -4,6 +4,8 @@ more-colorful.vim
 #### Goal: 
 Make vim more colorful
 
+![sample](http://pic.yupoo.com/athom/Cf9sNvtm/medish.jpg)
+
 #### Features:
 Comparing with the default vim syntax file provided from Go Authors.
 
