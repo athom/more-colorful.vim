@@ -314,7 +314,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Float", s:orange_yellow, "", "")
 	call <SID>X("Boolean", s:jade_blue, "", "")
 	call <SID>X("Error", s:powder_white, s:red, "")
-	call <SID>X("Special", s:powder_white, s:window, "")
+	call <SID>X("Special", s:green, "", "")
 	call <SID>X("Character", s:berry_pink, "", "")
 	"call <SID>X("Ignore", "666666", "", "")
 
@@ -352,6 +352,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonStatement", s:purple, "", "")
 	call <SID>X("pythonConditional", s:purple, "", "")
 	call <SID>X("pythonFunction", s:blue, "", "")
+
+	" HtmlGoexp Highlighting
+	call <SID>X("goexpKeyword", s:jie_purple, "", "")
+	call <SID>X("goexpBrace", s:jie_tea, "", "")
+	call <SID>X("goexpString", s:yellow, "", "")
+	call <SID>X("goexpArgument", s:bamboo_green, "", "")
 
 	" JavaScript Highlighting
 	call <SID>X("javaScriptBraces", s:purple, "", "")
