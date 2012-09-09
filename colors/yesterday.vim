@@ -22,6 +22,8 @@ let s:window = "efefef"
 let s:water_blue = "81C7D4"
 let s:jade_blue = "005CAF"
 
+let s:powder_white = "FFFFFB"
+
 let s:jie_purple = "77428D"
 let s:courtyard_purple = "8F77B5"
 let s:grape_purple = "6D2E5B"
@@ -39,6 +41,7 @@ let s:nake_red = "CB4042"
 
 let s:hupo_yellow = "CA7A2C"
 let s:orange_yellow = "F05E1C"
+let s:leave_yellow = "FBE251"
 
 let s:jie_tea = "AF5F3C"
 let s:tang_tea = "B47157"
@@ -291,22 +294,28 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	" Standard Highlighting
 	call <SID>X("Comment", s:comment, "", "")
-	call <SID>X("Todo", s:comment, s:background, "")
+	call <SID>X("Todo", s:comment, s:leave_yellow, "")
 	call <SID>X("Title", s:comment, "", "")
 	call <SID>X("Identifier", s:red, "", "none")
-	call <SID>X("Statement", s:foreground, "", "")
-	call <SID>X("Conditional", s:foreground, "", "")
-	call <SID>X("Repeat", s:foreground, "", "")
-	call <SID>X("Structure", s:purple, "", "")
-	call <SID>X("Function", s:green, "", "")
+	call <SID>X("Statement", s:courtyard_purple, "", "")
+	call <SID>X("Conditional", s:sunset_red, "", "")
+	call <SID>X("Repeat", s:fade_red, "", "")
+	call <SID>X("Label", s:vine_purple, "", "")
+	call <SID>X("Structure", s:jie_purple, "", "")
+	call <SID>X("Function", s:tang_tea, "", "")
 	call <SID>X("Constant", s:orange, "", "")
-	call <SID>X("String", s:red, "", "")
-	call <SID>X("Special", s:foreground, "", "")
+	call <SID>X("String", s:peach_pink, "", "")
 	call <SID>X("PreProc", s:purple, "", "")
-	call <SID>X("Operator", s:aqua, "", "none")
-	call <SID>X("Type", s:blue, "", "none")
-	call <SID>X("Define", s:purple, "", "none")
+	call <SID>X("Operator", s:dawn_red, "", "")
+	call <SID>X("Type", s:water_blue, "", "")
+	call <SID>X("Define", s:grape_purple, "", "")
 	call <SID>X("Include", s:blue, "", "")
+	call <SID>X("Number", s:swarrow_red, "", "")
+	call <SID>X("Float", s:orange_yellow, "", "")
+	call <SID>X("Boolean", s:jade_blue, "", "")
+	call <SID>X("Error", s:powder_white, s:red, "")
+	call <SID>X("Special", s:powder_white, s:window, "")
+	call <SID>X("Character", s:berry_pink, "", "")
 	"call <SID>X("Ignore", "666666", "", "")
 
 	" Vim Highlighting
@@ -345,12 +354,38 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonFunction", s:blue, "", "")
 
 	" JavaScript Highlighting
-	call <SID>X("javaScriptBraces", s:foreground, "", "")
-	call <SID>X("javaScriptFunction", s:purple, "", "")
-	call <SID>X("javaScriptConditional", s:purple, "", "")
-	call <SID>X("javaScriptRepeat", s:purple, "", "")
-	call <SID>X("javaScriptNumber", s:orange, "", "")
-	call <SID>X("javaScriptMember", s:orange, "", "")
+	call <SID>X("javaScriptBraces", s:purple, "", "")
+	"call <SID>X("javaScriptFunction", s:purple, "", "")
+	"call <SID>X("javaScriptConditional", s:purple, "", "")
+	"call <SID>X("javaScriptRepeat", s:purple, "", "")
+	"call <SID>X("javaScriptNumber", s:orange, "", "")
+	"call <SID>X("javaScriptMember", s:orange, "", "")
+
+	"call <SID>X("javaScriptLineComment", s:orange, "", "")
+	"call <SID>X("javaScriptDocComment", s:orange, "", "")
+	"call <SID>X("javaScriptCommentTodo", s:orange, "", "")
+	"call <SID>X("javaScriptCvsTag", s:orange, "", "")
+	"call <SID>X("javaScriptDocTags", s:orange, "", "")
+	"call <SID>X("javaScriptDocSeeTag", s:orange, "", "")
+	"call <SID>X("javaScriptDocParam", s:orange, "", "")
+	"call <SID>X("javaScriptStringS", s:orange, "", "")
+	"call <SID>X("javaScriptStringD", s:orange, "", "")
+	"call <SID>X("javaScriptRegexpString", s:orange, "", "")
+	"call <SID>X("javaScriptCharacter", s:orange, "", "")
+	"call <SID>X("javaScriptPrototype", s:orange, "", "")
+	"call <SID>X("javaScriptConditional", s:orange, "", "")
+	"call <SID>X("javaScriptBranch", s:orange, "", "")
+	"call <SID>X("javaScriptSource", s:orange, "", "")
+	"call <SID>X("javaScriptGlobalObjects", s:orange, "", "")
+	"call <SID>X("javaScriptExceptions", s:orange, "", "")
+	"call <SID>X("javaScriptDomErrNo", s:orange, "", "")
+	"call <SID>X("javaScriptDomNodeConsts", s:orange, "", "")
+	"call <SID>X("javaScriptDomElemAttrs", s:orange, "", "")
+	"call <SID>X("javaScriptDomElemFuncs", s:orange, "", "")
+	"call <SID>X("javaScriptHtmlEvents", s:orange, "", "")
+	"call <SID>X("javaScriptHtmlElemAttrs", s:orange, "", "")
+	"call <SID>X("javaScriptHtmlElemFuncs", s:orange, "", "")
+	"call <SID>X("javaScriptCssStyles", s:orange, "", "")
 
 	" HTML Highlighting
 	call <SID>X("htmlTag", s:sunset_red, "", "")
