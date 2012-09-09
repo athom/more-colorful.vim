@@ -353,10 +353,22 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("javaScriptMember", s:orange, "", "")
 
 	" HTML Highlighting
-	call <SID>X("htmlTag", s:red, "", "")
-	call <SID>X("htmlTagName", s:red, "", "")
-	call <SID>X("htmlArg", s:red, "", "")
-	call <SID>X("htmlScriptTag", s:red, "", "")
+	call <SID>X("htmlTag", s:sunset_red, "", "")
+	call <SID>X("htmlEndTag", s:sunset_red, "", "")
+	call <SID>X("htmlTagName", s:purple, "", "")
+	call <SID>X("htmlSpecialTagName", s:purple, s:window, "")
+	call <SID>X("htmlSpecialChar", s:hupo_yellow, s:window, "")
+	call <SID>X("htmlSpecial", s:hupo_yellow, s:window, "")
+	call <SID>X("htmlArg", s:water_blue, "", "")
+	call <SID>X("htmlScriptTag", s:green, "", "")
+	call <SID>X("htmlValue", s:jie_tea, "", "")
+	call <SID>X("htmlString", s:peach_pink, "", "")
+	call <SID>X("htmlPreStmt", s:green, "", "")
+	call <SID>X("htmlPreError", s:green, s:red, "")
+	call <SID>X("htmlPreProc", s:green, "", "")
+	call <SID>X("htmlPreAttr", s:green, "", "")
+	call <SID>X("htmlPreProcAttrName", s:green, "", "")
+	call <SID>X("htmlPreProcAttrError", s:green, s:red, "")
 
 	" Diff Highlighting
 	call <SID>X("diffAdded", s:green, "", "")
