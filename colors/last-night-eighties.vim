@@ -50,7 +50,7 @@ set background=dark
 hi clear
 syntax reset
 
-let g:colors_name = "Tomorrow-Night-Eighties"
+let g:colors_name = "last-night-eighties"
 
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Returns an approximate grey index for the given grey level
@@ -307,6 +307,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("Type", s:blue, "", "none")
 	call <SID>X("Define", s:purple, "", "none")
 	call <SID>X("Include", s:blue, "", "")
+	call <SID>X("Number", s:swarrow_red, "", "")
+	call <SID>X("Float", s:orange_yellow, "", "")
+	call <SID>X("Boolean", s:jade_blue, "", "")
+	call <SID>X("Error", s:foreground, s:red, "")
+	call <SID>X("Special", s:green, "", "")
+	call <SID>X("Character", s:berry_pink, "", "")
 	"call <SID>X("Ignore", "666666", "", "")
 
 	" Vim Highlighting
@@ -344,6 +350,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonConditional", s:purple, "", "")
 	call <SID>X("pythonFunction", s:blue, "", "")
 
+	" HtmlGoexp Highlighting
+	call <SID>X("goexpKeyword", s:jie_purple, "", "")
+	call <SID>X("goexpBrace", s:jie_tea, "", "")
+	call <SID>X("goexpString", s:yellow, "", "")
+	call <SID>X("goexpArgument", s:bamboo_green, "", "")
 	" JavaScript Highlighting
 	call <SID>X("javaScriptBraces", s:foreground, "", "")
 	call <SID>X("javaScriptFunction", s:purple, "", "")
@@ -351,6 +362,24 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("javaScriptRepeat", s:purple, "", "")
 	call <SID>X("javaScriptNumber", s:orange, "", "")
 	call <SID>X("javaScriptMember", s:orange, "", "")
+
+	" HTML Highlighting
+	call <SID>X("htmlTag", s:sunset_red, "", "")
+	call <SID>X("htmlEndTag", s:sunset_red, "", "")
+	call <SID>X("htmlTagName", s:purple, "", "")
+	call <SID>X("htmlSpecialTagName", s:purple, s:window, "")
+	call <SID>X("htmlSpecialChar", s:hupo_yellow, s:window, "")
+	call <SID>X("htmlSpecial", s:hupo_yellow, s:window, "")
+	call <SID>X("htmlArg", s:water_blue, "", "")
+	call <SID>X("htmlScriptTag", s:green, "", "")
+	call <SID>X("htmlValue", s:jie_tea, "", "")
+	call <SID>X("htmlString", s:peach_pink, "", "")
+	call <SID>X("htmlPreStmt", s:green, "", "")
+	call <SID>X("htmlPreError", s:green, s:red, "")
+	call <SID>X("htmlPreProc", s:green, "", "")
+	call <SID>X("htmlPreAttr", s:green, "", "")
+	call <SID>X("htmlPreProcAttrName", s:green, "", "")
+	call <SID>X("htmlPreProcAttrError", s:green, s:red, "")
 
 	" Diff Highlighting
 	call <SID>X("diffAdded", s:green, "", "")
