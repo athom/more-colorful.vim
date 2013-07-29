@@ -32,6 +32,7 @@ let s:half_purple = "986DB2"
 
 let s:peach_pink = "F596AA"
 let s:berry_pink = "B5495B"
+let s:dark_pink = "F72767"
 
 let s:dawn_red = "F19483"
 let s:swarrow_red = "9F353A"
@@ -442,7 +443,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	"	Todo
 	call <SID>X("goTodo", s:comment, s:yellow, "")
 	"	Special
-	call <SID>X("goSpecialString", s:window, "", "")
+	call <SID>X("goSpecialString", s:dark_pink, "", "")
 	"	Error
 	call <SID>X("goEscapeError", s:orange_yellow, s:red, "")
 	"	String
